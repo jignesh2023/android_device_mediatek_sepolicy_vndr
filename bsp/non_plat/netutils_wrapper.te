@@ -2,6 +2,10 @@
 # Common SEPolicy Rule
 # ==============================================
 
+allow netutils_wrapper ccci_device:chr_file { read write };
+allow netutils_wrapper ccci_vts_device:chr_file { read write };
+allow netutils_wrapper ccci_wifi_proxy_device:chr_file { read write };
+
 allow netutils_wrapper ipsec_mon:fd use;
 allow netutils_wrapper ipsec_mon:netlink_route_socket { read write };
 allow netutils_wrapper ipsec_mon:netlink_xfrm_socket { read write };
